@@ -1,0 +1,44 @@
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+%
+% Override \title
+%
+\let\originaltitle\title
+\newcommand{\settitlepos}[1]{%
+    \renewcommand{\title}[1]{%
+        \originaltitle{\vspace{#1}{##1}}%
+    }%
+}
+\settitlepos{-4cm}
+
+%
+% Define well-known sets
+%
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\M}{\mathcal{M}}
+
+%
+% Define \qed
+%
+\newcommand{\qedspace}[1]{%
+    \hspace{#1}$\blacksquare$
+}
+\newcommand{\qed}{\qedspace{2mm}}
+\newcommand{\setqedspace}[1]{%
+    \renewcommand{\qed}{\qedspace{##1}}%
+}
+
+%
+% Define \st
+%
+\newcommand{\stspace}[1]{\hspace{#1}\text{s.t.}\hspace{#1}}
+\newcommand{\st}{\stspace{2mm}}
+\newcommand{\setstspace}[1]{%
+    \renewcommand{\st}{\stspace{##1}}%
+}
