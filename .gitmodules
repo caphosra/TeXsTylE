@@ -1,3 +1,3 @@
-[submodule "LaTeX-Workshop"]
+[submodule "workshop"]
 	path = workshop
 	url = https://github.com/James-Yu/LaTeX-Workshop
