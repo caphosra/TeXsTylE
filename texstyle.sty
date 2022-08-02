@@ -4,6 +4,8 @@
 %
 % Override \title
 %
+% #def \settitlepos{pos}
+%
 \let\originaltitle\title
 \newcommand{\settitlepos}[1]{%
     \renewcommand{\title}[1]{%
@@ -14,6 +16,14 @@
 
 %
 % Define well-known sets
+%
+% #def \N
+% #def \Z
+% #def \Q
+% #def \R
+% #def \C
+% #def \K
+% #def \M
 %
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
@@ -26,6 +36,10 @@
 %
 % Define \qed
 %
+% #def \qedspace{space}
+% #def \qed
+% #def \setqedspace{space}
+%
 \newcommand{\qedspace}[1]{%
     \hspace{#1}$\blacksquare$
 }
@@ -37,8 +51,19 @@
 %
 % Define \st
 %
+% #def \stspace{space}
+% #def \st
+% #def \setstspace{space}
+%
 \newcommand{\stspace}[1]{\hspace{#1}\text{s.t.}\hspace{#1}}
 \newcommand{\st}{\stspace{2mm}}
 \newcommand{\setstspace}[1]{%
     \renewcommand{\st}{\stspace{##1}}%
 }
+
+%
+% Define \pd
+%
+% #def \pd
+%
+\newcommand{\pd}[2]{\ensuremath{\frac{\partial #1}{\partial #2}}}
