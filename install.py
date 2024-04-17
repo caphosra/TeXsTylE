@@ -1,10 +1,10 @@
 #!/bin/python3
 
+import glob
 import os
+import shutil
 import subprocess
 import sys
-import shutil
-import glob
 
 #
 # Get TEXMFHOME.
@@ -15,7 +15,7 @@ kpsewhich_proc = subprocess.run(
 )
 if kpsewhich_proc.returncode:
     print("Failed to get TEXMFHOME (๑> <๑)", file=sys.stderr)
-    os.exit(kpsewhich_proc.returncode)
+    exit(kpsewhich_proc.returncode)
 TEX_MF_HOME = kpsewhich_proc.stdout.decode("utf8")[:-1]
 
 #
